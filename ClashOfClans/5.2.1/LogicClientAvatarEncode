@@ -1,0 +1,364 @@
+LogicBase::encode(this, a2);
+  ChecksumEncoder::writeLong(a2, *((const LogicLong **)this + 0x18));
+  ChecksumEncoder::writeLong(a2, *((const LogicLong **)this + 0x19));
+  v4 = *(void (__fastcall **)(ChecksumEncoder *, int))(*(_DWORD *)a2 + 0x14);
+  if ( *((_DWORD *)this + 0x1A) )
+  {
+    v4(a2, 1);
+    ChecksumEncoder::writeLong(a2, *((const LogicLong **)this + 0x1A));
+    (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x10))(a2, *((_DWORD *)this + 0x20));
+    ByteStreamHelper::writeDataReference((int)a2, *((LogicData **)this + 0x1E));
+    (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 0x1F));
+  }
+  else
+  {
+    v4(a2, 0);
+  }
+  v5 = *(void (__fastcall **)(ChecksumEncoder *, int))(*(_DWORD *)a2 + 0x14);
+  if ( *((_DWORD *)this + 0x1B) )
+  {
+    v5(a2, 1);
+    ChecksumEncoder::writeLong(a2, *((const LogicLong **)this + 0x1B));
+  }
+  else
+  {
+    v5(a2, 0);
+  }
+  v6 = *(void (__fastcall **)(ChecksumEncoder *, int))(*(_DWORD *)a2 + 0x14);
+  if ( *((_DWORD *)this + 0x1D) )
+  {
+    v6(a2, 1);
+    ChecksumEncoder::writeLong(a2, *((const LogicLong **)this + 0x1D));
+  }
+  else
+  {
+    v6(a2, 0);
+  }
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 0x1C));
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 0x12));
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 0x13));
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 0x14));
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 0x16));
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x10))(a2, *((_DWORD *)this + 0x21));
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x10))(a2, *((_DWORD *)this + 0x22));
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 0x23));
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 0x24));
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 0x25));
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 0x26));
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 0x27));
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 0x28));
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 0x29));
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 0x2A));
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 0x2B));
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 0x2C));
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 0x2D));
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x14))(a2, *((unsigned __int8 *)this + 0xB8));
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 0x2F));
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *(_DWORD *)(*((_DWORD *)this + 9) + 8));
+  v7 = (_DWORD *)*((_DWORD *)this + 9);
+  v8 = v7[2];
+  if ( v8 >= 1 )
+  {
+    for ( i = 0; i < v8; ++i )
+    {
+      if ( v8 <= i )
+      {
+        String::format(v72, "LogicArrayList.get out of bounds %d/%d", i, v8);
+        Debugger::error((Debugger *)v72, v10);
+        String::~String(v72);
+      }
+      LogicDataSlot::encode(*(_DWORD *)(*v7 + 4 * i), (int)a2);
+      v7 = (_DWORD *)*((_DWORD *)this + 9);
+      v8 = v7[2];
+    }
+  }
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *(_DWORD *)(*((_DWORD *)this + 5) + 8));
+  v11 = (_DWORD *)*((_DWORD *)this + 5);
+  v12 = v11[2];
+  if ( v12 >= 1 )
+  {
+    for ( j = 0; j < v12; ++j )
+    {
+      if ( v12 <= j )
+      {
+        String::format(v72, "LogicArrayList.get out of bounds %d/%d", j, v12);
+        Debugger::error((Debugger *)v72, v14);
+        String::~String(v72);
+      }
+      LogicDataSlot::encode(*(_DWORD *)(*v11 + 4 * j), (int)a2);
+      v11 = (_DWORD *)*((_DWORD *)this + 5);
+      v12 = v11[2];
+    }
+  }
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *(_DWORD *)(*((_DWORD *)this + 6) + 8));
+  v15 = (_DWORD *)*((_DWORD *)this + 6);
+  v16 = v15[2];
+  if ( v16 >= 1 )
+  {
+    for ( k = 0; k < v16; ++k )
+    {
+      if ( v16 <= k )
+      {
+        String::format(v72, "LogicArrayList.get out of bounds %d/%d", k, v16);
+        Debugger::error((Debugger *)v72, v18);
+        String::~String(v72);
+      }
+      LogicDataSlot::encode(*(_DWORD *)(*v15 + 4 * k), (int)a2);
+      v15 = (_DWORD *)*((_DWORD *)this + 6);
+      v16 = v15[2];
+    }
+  }
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *(_DWORD *)(*((_DWORD *)this + 7) + 8));
+  v19 = (_DWORD *)*((_DWORD *)this + 7);
+  v20 = v19[2];
+  if ( v20 >= 1 )
+  {
+    for ( l = 0; l < v20; ++l )
+    {
+      if ( v20 <= l )
+      {
+        String::format(v72, "LogicArrayList.get out of bounds %d/%d", l, v20);
+        Debugger::error((Debugger *)v72, v22);
+        String::~String(v72);
+      }
+      LogicDataSlot::encode(*(_DWORD *)(*v19 + 4 * l), (int)a2);
+      v19 = (_DWORD *)*((_DWORD *)this + 7);
+      v20 = v19[2];
+    }
+  }
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(
+    a2,
+    *(_DWORD *)(*((_DWORD *)this + 0xA) + 8));
+  v23 = (_DWORD *)*((_DWORD *)this + 0xA);
+  v24 = v23[2];
+  if ( v24 >= 1 )
+  {
+    for ( m = 0; m < v24; ++m )
+    {
+      if ( v24 <= m )
+      {
+        String::format(v72, "LogicArrayList.get out of bounds %d/%d", m, v24);
+        Debugger::error((Debugger *)v72, v26);
+        String::~String(v72);
+      }
+      LogicDataSlot::encode(*(_DWORD *)(*v23 + 4 * m), (int)a2);
+      v23 = (_DWORD *)*((_DWORD *)this + 0xA);
+      v24 = v23[2];
+    }
+  }
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(
+    a2,
+    *(_DWORD *)(*((_DWORD *)this + 0xB) + 8));
+  v27 = (_DWORD *)*((_DWORD *)this + 0xB);
+  v28 = v27[2];
+  if ( v28 >= 1 )
+  {
+    for ( n = 0; n < v28; ++n )
+    {
+      if ( v28 <= n )
+      {
+        String::format(v72, "LogicArrayList.get out of bounds %d/%d", n, v28);
+        Debugger::error((Debugger *)v72, v30);
+        String::~String(v72);
+      }
+      LogicDataSlot::encode(*(_DWORD *)(*v27 + 4 * n), (int)a2);
+      v27 = (_DWORD *)*((_DWORD *)this + 0xB);
+      v28 = v27[2];
+    }
+  }
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *(_DWORD *)(*((_DWORD *)this + 3) + 8));
+  v31 = (_DWORD *)*((_DWORD *)this + 3);
+  v32 = v31[2];
+  if ( v32 >= 1 )
+  {
+    for ( ii = 0; ii < v32; ++ii )
+    {
+      if ( v32 <= ii )
+      {
+        String::format(v72, "LogicArrayList.get out of bounds %d/%d", ii, v32);
+        Debugger::error((Debugger *)v72, v34);
+        String::~String(v72);
+      }
+      LogicDataSlot::encode(*(_DWORD *)(*v31 + 4 * ii), (int)a2);
+      v31 = (_DWORD *)*((_DWORD *)this + 3);
+      v32 = v31[2];
+    }
+  }
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *(_DWORD *)(*((_DWORD *)this + 2) + 8));
+  v35 = (_DWORD *)*((_DWORD *)this + 2);
+  v36 = v35[2];
+  if ( v36 >= 1 )
+  {
+    for ( jj = 0; jj < v36; ++jj )
+    {
+      if ( v36 <= jj )
+      {
+        String::format(v72, "LogicArrayList.get out of bounds %d/%d", jj, v36);
+        Debugger::error((Debugger *)v72, v38);
+        String::~String(v72);
+      }
+      LogicDataSlot::encode(*(_DWORD *)(*v35 + 4 * jj), (int)a2);
+      v35 = (_DWORD *)*((_DWORD *)this + 2);
+      v36 = v35[2];
+    }
+  }
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *(_DWORD *)(*((_DWORD *)this + 4) + 8));
+  v39 = (_DWORD *)*((_DWORD *)this + 4);
+  v40 = v39[2];
+  if ( v40 >= 1 )
+  {
+    for ( kk = 0; kk < v40; ++kk )
+    {
+      if ( v40 <= kk )
+      {
+        String::format(v72, "LogicArrayList.get out of bounds %d/%d", kk, v40);
+        Debugger::error((Debugger *)v72, v42);
+        String::~String(v72);
+      }
+      LogicDataSlot::encode(*(_DWORD *)(*v39 + 4 * kk), (int)a2);
+      v39 = (_DWORD *)*((_DWORD *)this + 4);
+      v40 = v39[2];
+    }
+  }
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(
+    a2,
+    *(_DWORD *)(*((_DWORD *)this + 0x17) + 8));
+  v43 = (_DWORD *)*((_DWORD *)this + 0x17);
+  v44 = v43[2];
+  if ( v44 >= 1 )
+  {
+    for ( ll = 0; ll < v44; ++ll )
+    {
+      if ( v44 <= ll )
+      {
+        String::format(v72, "LogicArrayList.get out of bounds %d/%d", ll, v44);
+        Debugger::error((Debugger *)v72, v46);
+        String::~String(v72);
+      }
+      LogicUnitSlot::encode(*(_DWORD *)(*v43 + 4 * ll), (int)a2);
+      v43 = (_DWORD *)*((_DWORD *)this + 0x17);
+      v44 = v43[2];
+    }
+  }
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(
+    a2,
+    *(_DWORD *)(*((_DWORD *)this + 0xC) + 8));
+  v47 = (_DWORD *)*((_DWORD *)this + 0xC);
+  v48 = v47[2];
+  if ( v48 >= 1 )
+  {
+    for ( mm = 0; mm < v48; ++mm )
+    {
+      if ( v48 <= mm )
+      {
+        String::format(v72, "LogicArrayList.get out of bounds %d/%d", mm, v48);
+        Debugger::error((Debugger *)v72, v50);
+        String::~String(v72);
+      }
+      ByteStreamHelper::writeDataReference((int)a2, *(LogicData **)(*v47 + 4 * mm));
+      v47 = (_DWORD *)*((_DWORD *)this + 0xC);
+      v48 = v47[2];
+    }
+  }
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(
+    a2,
+    *(_DWORD *)(*((_DWORD *)this + 0xD) + 8));
+  v51 = (_DWORD *)*((_DWORD *)this + 0xD);
+  v52 = v51[2];
+  if ( v52 >= 1 )
+  {
+    for ( nn = 0; nn < v52; ++nn )
+    {
+      if ( v52 <= nn )
+      {
+        String::format(v72, "LogicArrayList.get out of bounds %d/%d", nn, v52);
+        Debugger::error((Debugger *)v72, v54);
+        String::~String(v72);
+      }
+      ByteStreamHelper::writeDataReference((int)a2, *(LogicData **)(*v51 + 4 * nn));
+      v51 = (_DWORD *)*((_DWORD *)this + 0xD);
+      v52 = v51[2];
+    }
+  }
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(
+    a2,
+    *(_DWORD *)(*((_DWORD *)this + 0x11) + 8));
+  v55 = (_DWORD *)*((_DWORD *)this + 0x11);
+  v56 = v55[2];
+  if ( v56 >= 1 )
+  {
+    for ( i1 = 0; i1 < v56; ++i1 )
+    {
+      if ( v56 <= i1 )
+      {
+        String::format(v72, "LogicArrayList.get out of bounds %d/%d", i1, v56);
+        Debugger::error((Debugger *)v72, v58);
+        String::~String(v72);
+      }
+      LogicDataSlot::encode(*(_DWORD *)(*v55 + 4 * i1), (int)a2);
+      v55 = (_DWORD *)*((_DWORD *)this + 0x11);
+      v56 = v55[2];
+    }
+  }
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(
+    a2,
+    *(_DWORD *)(*((_DWORD *)this + 0xE) + 8));
+  v59 = (_DWORD *)*((_DWORD *)this + 0xE);
+  v60 = v59[2];
+  if ( v60 >= 1 )
+  {
+    for ( i2 = 0; i2 < v60; ++i2 )
+    {
+      if ( v60 <= i2 )
+      {
+        String::format(v72, "LogicArrayList.get out of bounds %d/%d", i2, v60);
+        Debugger::error((Debugger *)v72, v62);
+        String::~String(v72);
+      }
+      LogicDataSlot::encode(*(_DWORD *)(*v59 + 4 * i2), (int)a2);
+      v59 = (_DWORD *)*((_DWORD *)this + 0xE);
+      v60 = v59[2];
+    }
+  }
+  (*(void (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(
+    a2,
+    *(_DWORD *)(*((_DWORD *)this + 0xF) + 8));
+  v63 = (_DWORD *)*((_DWORD *)this + 0xF);
+  v64 = v63[2];
+  if ( v64 >= 1 )
+  {
+    for ( i3 = 0; i3 < v64; ++i3 )
+    {
+      if ( v64 <= i3 )
+      {
+        String::format(v72, "LogicArrayList.get out of bounds %d/%d", i3, v64);
+        Debugger::error((Debugger *)v72, v66);
+        String::~String(v72);
+      }
+      LogicDataSlot::encode(*(_DWORD *)(*v63 + 4 * i3), (int)a2);
+      v63 = (_DWORD *)*((_DWORD *)this + 0xF);
+      v64 = v63[2];
+    }
+  }
+  result = (*(int (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 0x18))(
+             a2,
+             *(_DWORD *)(*((_DWORD *)this + 0x10) + 8));
+  v68 = (_DWORD *)*((_DWORD *)this + 0x10);
+  v69 = v68[2];
+  if ( v69 >= 1 )
+  {
+    for ( i4 = 0; i4 < v69; ++i4 )
+    {
+      if ( v69 <= i4 )
+      {
+        String::format(v72, "LogicArrayList.get out of bounds %d/%d", i4, v69);
+        Debugger::error((Debugger *)v72, v71);
+        String::~String(v72);
+      }
+      result = LogicDataSlot::encode(*(_DWORD *)(*v68 + 4 * i4), (int)a2);
+      v68 = (_DWORD *)*((_DWORD *)this + 0x10);
+      v69 = v68[2];
+    }
+  }
+  return result;
+}
