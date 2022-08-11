@@ -1,0 +1,1 @@
+return (*(int (__fastcall **)(ChecksumEncoder *, _DWORD))(*(_DWORD *)a2 + 24))(a2, *((_DWORD *)this + 1));
