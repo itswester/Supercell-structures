@@ -1,0 +1,18 @@
+PiranhaMessage::encode(this);
+ChecksumEncoder::writeLong((LoginMessage *)((char *)this + 8), *((const LogicLong **)this + 0xC));
+ByteStream::writeString((LoginMessage *)((char *)this + 8), *((String **)this + 0xD));
+ByteStream::writeInt((LoginMessage *)((char *)this + 8), *((_DWORD *)this + 0xE));
+ByteStream::writeInt((LoginMessage *)((char *)this + 8), 0);
+ByteStream::writeInt((LoginMessage *)((char *)this + 8), *((_DWORD *)this + 0xF));
+ByteStream::writeString((LoginMessage *)((char *)this + 8), *((String **)this + 0x10));
+ByteStream::writeString((LoginMessage *)((char *)this + 8), *((String **)this + 0x11));
+ByteStream::writeString((LoginMessage *)((char *)this + 8), *((String **)this + 0x12));
+ByteStream::writeString((LoginMessage *)((char *)this + 8), *((String **)this + 0x13));
+ByteStream::writeString((LoginMessage *)((char *)this + 8), *((String **)this + 0x14));
+ByteStreamHelper::writeDataReference((int)this + 8, *((LogicData **)this + 0x1B));
+ByteStream::writeString((LoginMessage *)((char *)this + 8), (String *)this + 0x15);
+ByteStream::writeString((LoginMessage *)((char *)this + 8), *((String **)this + 0x1C));
+ByteStream::writeString((LoginMessage *)((char *)this + 8), *((String **)this + 0x1D));
+ByteStream::writeBoolean((LoginMessage *)((char *)this + 8), *((unsigned __int8 *)this + 0xA8));
+ByteStream::writeStringReference((LoginMessage *)((char *)this + 8), (const String *)this + 0x1E);
+return ByteStream::writeStringReference((LoginMessage *)((char *)this + 8), (const String *)this + 0x24);
