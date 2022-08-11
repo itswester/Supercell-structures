@@ -1,0 +1,3 @@
+PiranhaMessage::encode(this);
+ByteStreamHelper::writeDataReference((int)this + 8, *((LogicData **)this + 0xC));
+return ChecksumEncoder::writeLong((DonateAllianceUnitMessage *)((char *)this + 8), *((const LogicLong **)this + 0xD));
