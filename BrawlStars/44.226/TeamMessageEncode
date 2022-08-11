@@ -1,0 +1,121 @@
+#sub_C56F88 start (TEAM ENTRY)
+
+       self.writeVInt(0)
+       self.writeBoolean(True)
+       self.writeVInt(0)
+       self.writeLong(player.ID[0], player.ID[1])
+       self.writeVInt(0)
+       self.writeBoolean(True)#?
+       self.writeBoolean(False)
+       
+       self.writeVInt(0)
+
+       self.writeVInt(0)
+
+       self.writeVInt(0)
+
+       self.writeDataReference(15,10)#sub_87762C
+
+       self.writeBoolean(False)
+
+       #sub_2BFF10
+
+
+
+       self.writeVInt(1)
+
+       #sub_5C5674 start (Team Member Entry)
+
+
+
+       self.writeBoolean(True)
+       self.writeLong(player.ID[0], player.ID[1])
+       self.writeDataReference(16,0)#sub_87762C
+       self.writeDataReference(29,0)#sub_87762C
+       self.writeVInt(0)
+       self.writeVInt(0)
+       self.writeVInt(0)
+       self.writeVInt(0)
+       self.writeVInt(0)
+       self.writeBoolean(True)
+       self.writeVInt(0)
+       self.writeVInt(0)
+       self.writeVInt(0)
+       self.writeVInt(0)
+       self.writeVInt(0)
+       self.writeVInt(0)
+       #sub_1A2060 start (PlayerDisplayData)
+       self.writeString(player.Name)
+       self.writeVInt(0)
+       self.writeVInt(0)
+       self.writeVInt(0)
+       self.writeVInt(0)
+
+       #sub_1A2060 end
+
+       self.writeDataReference(0)#sub_87762C
+       self.writeDataReference(0)#sub_87762C
+       self.writeDataReference(0)#sub_87762C
+       self.writeDataReference(0)#sub_87762C
+       self.writeVInt(0)
+       self.writeVInt(0)
+       self.writeVInt(0)
+       
+       
+
+       #sub_5C5674 end (MemberEntry)
+
+
+
+       
+       self.writeVInt(1)
+
+       #sub_2F4BA4 start (TeamInvite)
+       
+       self.writeLong(0,1)
+       self.writeLong(0,1)
+       self.writeString("Supercell")#Name Invite
+       self.writeVInt(0)
+
+       
+
+       #sub_2F4BA4 end
+
+
+
+       self.writeVInt(0)#TeamJoinRequests
+
+       #sub_5B8A7C (Team JoinRequest)
+
+       #self.writeInt(0)
+
+       #self.writeInt(0)
+
+       #sub_503DE4
+
+
+
+       self.writeVInt(0) #Array
+
+
+
+       self.writeBoolean(True)
+
+       self.writeBoolean(True)
+
+       self.writeBoolean(True)
+
+       self.writeBoolean(True)
+
+
+
+       #sub_A72240 start
+
+       self.writeInt(0)
+
+       self.writeInt(0)
+
+       self.writeInt(6)#?
+
+       #sub_A72250 end
+
