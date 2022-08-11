@@ -1,0 +1,24 @@
+PiranhaMessage::encode(this);
+ByteStream::writeInt((FriendListMessage *)((char *)this + 8), *((_DWORD *)this + 0xD));
+v2 = *((_DWORD *)this + 0xC);
+if ( !v2 )
+  return ByteStream::writeInt((FriendListMessage *)((char *)this + 8), 0xFFFFFFFF);
+v3 = *(_DWORD *)(v2 + 8);
+result = ByteStream::writeInt((FriendListMessage *)((char *)this + 8), v3);
+if ( v3 >= 1 )
+{
+  for ( i = 0; i != v3; ++i )
+  {
+    v6 = (_DWORD *)*((_DWORD *)this + 0xC);
+    v7 = v6[2];
+    if ( v7 <= i )
+    {
+      String::format(v9, "LogicArrayList.get out of bounds %d/%d", i, v7);
+      Debugger::error((Debugger *)v9, v8);
+      String::~String(v9);
+    }
+    result = FriendEntry::encode(*(FriendEntry **)(*v6 + 4 * i), (FriendListMessage *)((char *)this + 8));
+  }
+}
+return result;
+}
