@@ -1,0 +1,7 @@
+PiranhaMessage::encode(this);
+ByteStream::writeInt((LoginFailedMessage *)((char *)this + 8), *((_DWORD *)this + 0xC));
+ByteStream::writeString((LoginFailedMessage *)((char *)this + 8), *((String **)this + 0xD));
+ByteStream::writeString((LoginFailedMessage *)((char *)this + 8), *((String **)this + 0xE));
+ByteStream::writeString((LoginFailedMessage *)((char *)this + 8), *((String **)this + 0xF));
+ByteStream::writeString((LoginFailedMessage *)((char *)this + 8), *((String **)this + 0x10));
+return ByteStream::writeString((LoginFailedMessage *)((char *)this + 8), *((String **)this + 0x11));
