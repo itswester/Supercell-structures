@@ -1,0 +1,9 @@
+ChecksumEncoder::writeLong(a2, *((const LogicLong **)this + 1));
+ChecksumEncoder::writeLong(a2, *((const LogicLong **)this + 3));
+ChecksumEncoder::writeLong(a2, *((const LogicLong **)this + 4));
+(*(void (__fastcall **)(ByteStream *, _DWORD))(*(_DWORD *)a2 + 16))(a2, *((_DWORD *)this + 5));
+(*(void (__fastcall **)(ByteStream *, _DWORD))(*(_DWORD *)a2 + 24))(a2, *((_DWORD *)this + 6));
+(*(void (__fastcall **)(ByteStream *, _DWORD))(*(_DWORD *)a2 + 24))(a2, *((_DWORD *)this + 7));
+(*(void (__fastcall **)(ByteStream *, _DWORD))(*(_DWORD *)a2 + 24))(a2, *((_DWORD *)this + 8));
+(*(void (__fastcall **)(ByteStream *, _DWORD))(*(_DWORD *)a2 + 24))(a2, *((_DWORD *)this + 9));
+return (*(int (__fastcall **)(ByteStream *, _DWORD))(*(_DWORD *)a2 + 20))(a2, *((unsigned __int8 *)this + 0x28));
