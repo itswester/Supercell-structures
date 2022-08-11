@@ -1,0 +1,6 @@
+LogicBase::encode(this, a2);
+ChecksumEncoder::writeLong(a2, *((const LogicLong **)this + 3));
+(*(void (__fastcall **)(ByteStream *, _DWORD))(*(_DWORD *)a2 + 0x10))(a2, *((_DWORD *)this + 4));
+(*(void (__fastcall **)(ByteStream *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 5));
+(*(void (__fastcall **)(ByteStream *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 6));
+return (*(int (__fastcall **)(ByteStream *, _DWORD))(*(_DWORD *)a2 + 0x18))(a2, *((_DWORD *)this + 7));
