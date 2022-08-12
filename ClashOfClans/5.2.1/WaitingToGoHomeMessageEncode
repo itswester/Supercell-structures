@@ -1,0 +1,2 @@
+PiranhaMessage::encode(this);
+return ByteStream::writeInt((WaitingToGoHomeMessage *)((char *)this + 8), *((_DWORD *)this + 0xC));
