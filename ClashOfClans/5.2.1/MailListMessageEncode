@@ -1,0 +1,27 @@
+PiranhaMessage::encode(this);
+  v2 = *((_DWORD *)this + 0xC);
+  if ( v2 )
+  {
+    v3 = *(_DWORD *)(v2 + 8);
+    ByteStream::writeInt((MailListMessage *)((char *)this + 8), v3);
+    if ( v3 >= 1 )
+    {
+      for ( i = 0; i != v3; ++i )
+      {
+        v5 = (_DWORD *)*((_DWORD *)this + 0xC);
+        v6 = v5[2];
+        if ( v6 <= i )
+        {
+          String::format(v9, "LogicArrayList.get out of bounds %d/%d", i, v6);
+          Debugger::error((Debugger *)v9, v7);
+          String::~String(v9);
+        }
+        MailEntry::encode(*(MailEntry **)(*v5 + 4 * i), (MailListMessage *)((char *)this + 8));
+      }
+    }
+  }
+  else
+  {
+    ByteStream::writeInt((MailListMessage *)((char *)this + 8), 0xFFFFFFFF);
+  }
+  return ByteStream::writeBoolean((MailListMessage *)((char *)this + 8), *((unsigned __int8 *)this + 0x34));
