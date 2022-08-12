@@ -1,0 +1,10 @@
+PiranhaMessage::encode(this);
+ByteStream::writeInt((VisitedHomeDataMessage *)((char *)this + 8), *((_DWORD *)this + 0xC));
+LogicClientHome::encode(*((LogicClientHome **)this + 0xD), (VisitedHomeDataMessage *)((char *)this + 8));
+(*(void (__fastcall **)(_DWORD, char *))(**((_DWORD **)this + 0xE) + 8))(*((_DWORD *)this + 0xE), (char *)this + 8);
+if ( !*((_DWORD *)this + 0xF) )
+  return ByteStream::writeBoolean((VisitedHomeDataMessage *)((char *)this + 8), 0);
+ByteStream::writeBoolean((VisitedHomeDataMessage *)((char *)this + 8), 1);
+return (*(int (__fastcall **)(_DWORD, char *))(**((_DWORD **)this + 0xF) + 8))(
+         *((_DWORD *)this + 0xF),
+         (char *)this + 8);
