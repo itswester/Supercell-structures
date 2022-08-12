@@ -1,0 +1,46 @@
+
+  PiranhaMessage::encode(this);
+  v2 = *((_DWORD *)this + 0xC);
+  if ( v2 )
+  {
+    v3 = *(_DWORD *)(v2 + 8);
+    ByteStream::writeInt((AllianceRankingListMessage *)((char *)this + 8), v3);
+    if ( v3 >= 1 )
+    {
+      for ( i = 0; i != v3; ++i )
+      {
+        v5 = (_DWORD *)*((_DWORD *)this + 0xC);
+        v6 = v5[2];
+        if ( v6 <= i )
+        {
+          String::format(v14, "LogicArrayList.get out of bounds %d/%d", i, v6);
+          Debugger::error((Debugger *)v14, v7);
+          String::~String(v14);
+        }
+        (***(void (__fastcall ****)(_DWORD, char *))(*v5 + 4 * i))(*(_DWORD *)(*v5 + 4 * i), (char *)this + 8);
+      }
+    }
+  }
+  else
+  {
+    ByteStream::writeInt((AllianceRankingListMessage *)((char *)this + 8), 0xFFFFFFFF);
+  }
+  ByteStream::writeInt((AllianceRankingListMessage *)((char *)this + 8), *((_DWORD *)this + 0xD));
+  v8 = *(_DWORD *)(*((_DWORD *)this + 0xE) + 8);
+  result = ByteStream::writeInt((AllianceRankingListMessage *)((char *)this + 8), v8);
+  if ( v8 >= 1 )
+  {
+    for ( j = 0; j != v8; ++j )
+    {
+      v11 = (_DWORD *)*((_DWORD *)this + 0xE);
+      v12 = v11[2];
+      if ( v12 <= j )
+      {
+        String::format(v14, "LogicArrayList.get out of bounds %d/%d", j, v12);
+        Debugger::error((Debugger *)v14, v13);
+        String::~String(v14);
+      }
+      result = ByteStream::writeInt((AllianceRankingListMessage *)((char *)this + 8), *(_DWORD *)(*v11 + 4 * j));
+    }
+  }
+ return result;
