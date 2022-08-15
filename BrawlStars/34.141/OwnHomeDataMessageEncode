@@ -1,2 +1,3 @@
+PiranhaMessage::encode 
 LogicClientHome::encode #Checksum Encoder
 ByteStream::WriteVInt
