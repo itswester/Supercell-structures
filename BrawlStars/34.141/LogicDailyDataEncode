@@ -16,4 +16,47 @@ ByteStream::WriteVInt
 ByteStream::WriteVInt
 ByteStream::WriteVInt
 ByteStream::WriteBoolean 
-#TODO Structure
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ForcedDpops::encode #Checksum encoder
+ByteStream::WriteBoolean
+TimedOffer::encode #Checksum encoder
+ByteStream::WriteBoolean
+TimedOffer::encode #Checksum encoder
+ByteStream::WriteBoolean
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+LogicOfferBundle::encode #Checksum encoder
+ByteStream::WriteVInt
+AdStatus::encode #Checksum encoder
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStreamHelper::WriteDataReference
+ByteStream::WriteInt
+ByteStream::WriteInt
+ByteStream::WriteVInt
+IntValueEntry::encode #Checksum encoder
+ByteStream::WriteVInt
+CooldownEntry::encode #Checksum encoder
+ByteStream::WriteVInt
+BrawlPassSeasonData::encode #Checksum encoder
+ByteStream::WriteVInt
+ProLeageSeasonData::encode #Checksum encoder
+ByteStream::WriteBoolean
+LogicQuests::encode #Checksum encoder
+ByteStream::WriteBoolean
+VanityItems::encode #Checksum encoder
+ByteStream::WriteBoolean
+LogicPlayerRankedSeasonData::encode #Checksum encoder
+
+
+
