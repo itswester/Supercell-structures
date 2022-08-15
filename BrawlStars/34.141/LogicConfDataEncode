@@ -1,0 +1,20 @@
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+EventSlot::encode #Checksum encoder
+ByteStream::WriteVInt
+EventData::encode #Checksum encoder
+ByteStream::WriteVInt
+EventData::encode #Checksum encoder
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteBoolean
+ByteStream::WriteVInt
+ReleaseEntry::encode #Checksum encoder
+ByteStream::WriteVInt
+IntValueEntry::encode #Checksum encoder
+ByteStream::WriteVInt
+TimedIntValueEntry::encode #Checksum encoder
+ByteStream::WriteVInt
+CustomEvent::encode #Checksum encoder
