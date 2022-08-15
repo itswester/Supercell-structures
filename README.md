@@ -20,6 +20,6 @@ The creator of the repository is not related to Supecell Oy and not to all their
 
 Credits
 
-ClashOfClans Dump libg bye @root-7325
+ClashOfClans Dump libg by @root-7325
 
 BrawlStars structures by @Zhany4ka
