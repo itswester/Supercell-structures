@@ -1,0 +1,2 @@
+BaseNotification::encode() #Checksum encoder
+ByteStream::WriteVInt
