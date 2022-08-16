@@ -1,0 +1,28 @@
+ChecksumEncoder::WriteLong
+ChecksumEncoder::WriteLong
+ByteStream::WriteString #Pass Token
+ByteStream::WriteString #GamecenterID
+ByteStream::WriteString #FacebookID
+ByteStream::WriteVInt #Major Version
+ByteStream::WriteVInt #Build
+ByteStream::WriteVInt #Build
+ByteStream::WriteVInt #MinorVersion
+ByteStream::WriteString  #Environment(prod,dev and etc.)
+ByteStream::WriteInt
+ByteStream::WriteInt
+ByteStream::WriteInt
+ByteStream::WriteInt
+ByteStream::WriteString #FacebookAppID
+ByteStream::WriteString #ServerTime
+ByteStream::WriteString #Account Create date
+ByteStream::WriteString #Region
+ByteStream::WriteString #City
+ByteStream::WriteString 
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteString  #AssetsURL
+ByteStream::WriteString  #CDNURL
+ByteStream::WriteVInt
+ByteStream::WriteString  #AssetsEventsURL
