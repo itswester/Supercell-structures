@@ -1,0 +1,39 @@
+((void (__fastcall *)(_DWORD))LogicClientAvatar::encode)(*(_DWORD *)(a1 + 0xC));
+LogicConfData::encode(*(_DWORD *)(a1 + 0x10), (int)a2);
+(*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x48))(a2, *(_DWORD *)(a1 + 8));
+(*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x1C));
+if ( *(int *)(a1 + 0x1C) >= 1 )
+{
+  v4 = 0;
+  do
+  {
+    v5 = *(_DWORD *)(*(_DWORD *)(a1 + 0x14) + 4 * v4);
+    v6 = *(void (__fastcall **)(int, int))(*a2 + 0x40);
+    v7 = (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 8))(v5);
+    v6((int)a2, v7);
+    (*(void (__fastcall **)(int, int *))(*(_DWORD *)v5 + 0xC))(v5, a2);
+    ++v4;
+  }
+  while ( v4 < *(_DWORD *)(a1 + 0x1C) );
+}
+(*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x2C));
+(*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x20))(a2, *(unsigned __int8 *)(a1 + 0x28));
+v8 = *(_DWORD *)(a1 + 0x24);
+v9 = *(int (__fastcall **)(int, _DWORD))(*a2 + 64);
+if ( !v8 )
+  return (_DWORD *)v9((int)a2, 0);
+v9((int)a2, *(_DWORD *)(v8 + 8));
+result = *(_DWORD **)(a1 + 0x24);
+if ( (int)result[2] >= 1 )
+{
+  v11 = 0;
+  do
+  {
+    GathaDrop::encode(*(_DWORD **)(*result + 4 * v11), a2);
+    result = *(_DWORD **)(a1 + 36);
+    ++v11;
+  }
+  while ( v11 < result[2] );
+}
+return result;
+}
