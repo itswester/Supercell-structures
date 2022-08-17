@@ -1,0 +1,12 @@
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStreamHelper::WriteDataReference #MapID
+ByteStream::WriteVInt
+ByteStream::WriteString
+ByteStream::WriteVInt
+ByteStream::WriteVInt(m) #count modificators
+if m >= 1:
+  ByteStream::WriteVInt
