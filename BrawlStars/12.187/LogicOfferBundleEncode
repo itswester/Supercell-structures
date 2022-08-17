@@ -1,0 +1,17 @@
+ByteStream::WriteVInt  #RewardCount
+
+#LogicGemOffer::encode start
+
+ByteStream::WriteVInt #Type
+ByteStream::WriteVInt #Count
+ByteStreamHelper::WriteDataReference #ID DataReference
+ByteStream::WriteVInt #Extra
+
+#LogicGemOffer::encode end
+
+ByteStream::WriteVInt #Count type
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteVInt
+ByteStream::WriteString #OfferName
