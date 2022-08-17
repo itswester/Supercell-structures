@@ -1,6 +1,6 @@
-<h1 align="center">Привет я  <a href="https://github.com/Zhany4ka" target="_blank">Женечка</a> 
+<h1 align="center">Hello I'm <a href="https://github.com/Zhany4ka" target="_blank">Zhany4ka</a> 
 <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
-<h3 align="center">Активно занимаюсь  SC RE по разным играм компании Supercell Oy</h3>
+<h3 align="center">I'm  SC RE</h3>
 # Supercell
 Здесь размещаются файлы структур на разные версии и игры @Supercell Oy
 
