@@ -1,4 +1,4 @@
-<h1 align="center">Привет я  <a href="https://daniilshat.ru/" target="_blank">Женечка</a> 
+<h1 align="center">Привет я  <a href="https://github.com/Zhany4ka" target="_blank">Женечка</a> 
 <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
 <h3 align="center">Активно занимаюсь  SC RE по разным играм компании Supercell Oy</h3>
 # Supercell
