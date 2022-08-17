@@ -1,0 +1,67 @@
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)a1);
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 4));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 8));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xC));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x10));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x14));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x18));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x1C));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x20));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x24));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x28));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x2C));
+WriteVLong(a2, (_DWORD *)(a1 + 0x30));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x44));
+if ( *(int *)(a1 + 0x44) >= 1 )
+{
+  v4 = 0;
+  do
+    EventSlotData::encode(*(_DWORD *)(*(_DWORD *)(a1 + 0x3C) + 4 * v4++), a2);
+  while ( v4 < *(_DWORD *)(a1 + 0x44) );
+}
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x50));
+if ( *(int *)(a1 + 0x50) >= 1 )
+{
+  v5 = 0;
+  do
+    EventData::encode(*(_DWORD *)(*(_DWORD *)(a1 + 0x48) + 4 * v5++), a2);
+  while ( v5 < *(_DWORD *)(a1 + 0x50) );
+}
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x5C));
+if ( *(int *)(a1 + 0x5C) >= 1 )
+{
+  v6 = 0;
+  do
+    EventData::encode(*(_DWORD *)(*(_DWORD *)(a1 + 0x54) + 4 * v6++), a2);
+  while ( v6 < *(_DWORD *)(a1 + 0x5C) );
+}
+WriteVLong(a2, (_DWORD *)(a1 + 0x60));
+WriteVLong(a2, (_DWORD *)(a1 + 0x6C));
+WriteVLong(a2, (_DWORD *)(a1 + 0x78));
+WriteVLong(a2, (_DWORD *)(a1 + 0x84));
+WriteVLong(a2, (_DWORD *)(a1 + 0x90));
+WriteVLong(a2, (_DWORD *)(a1 + 0x9C));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xA8));
+Unknownarray(*(_DWORD *)(a1 + 0xAC), a2);
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xB0));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xB4));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *(_DWORD *)(a1 + 0xB8));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xBC));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xC0));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x20))(a2, *(unsigned __int8 *)(a1 + 0xC4));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x20))(a2, *(unsigned __int8 *)(a1 + 0xC5));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x20))(a2, *(unsigned __int8 *)(a1 + 0xC6));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xC8));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xCC));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xD8));
+result = *(_DWORD *)(a1 + 0xD8);
+if ( result >= 1 )
+{
+  for ( i = 0; i < result; ++i )
+  {
+    ReleaseEnty::encode(*(_DWORD *)(*(_DWORD *)(a1 + 0xD0) + 4 * i), a2);
+    result = *(_DWORD *)(a1 + 0xD8);
+  }
+}
+return result
+}
