@@ -1,0 +1,18 @@
+{
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 32))(a2, *a1);// WriteBoolean
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 76))(a2, *((_DWORD *)a1 + 1));// WriteLong
+  WriteDataReference(a2, *((_DWORD *)a1 + 2));
+  WriteDataReference(a2, *((_DWORD *)a1 + 3));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *((_DWORD *)a1 + 4));// WriteVInt
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *((_DWORD *)a1 + 5));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *((_DWORD *)a1 + 6));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *((_DWORD *)a1 + 7));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 32))(a2, a1[1]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *((_DWORD *)a1 + 8));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *((_DWORD *)a1 + 9));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *((_DWORD *)a1 + 0xA));
+  PlayerDisplayData::encode(*((_DWORD *)a1 + 0xB), a2);
+  WriteDataReference(a2, *((_DWORD *)a1 + 0xC));
+  WriteDataReference(a2, *((_DWORD *)a1 + 0xD));
+  return (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *((_DWORD *)a1 + 0xE));
+}
