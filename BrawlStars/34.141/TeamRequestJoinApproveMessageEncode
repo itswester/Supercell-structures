@@ -1,0 +1,6 @@
+{
+  PiranhaMessage::encode();
+  LogicLong(a1 + 8);
+  WriteBoolean(a1 + 8, *(unsigned __int8 *)(a1 + 0x54));
+  return WriteBoolean(a1 + 8, *(unsigned __int8 *)(a1 + 0x55));
+}
