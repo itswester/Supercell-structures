@@ -1,0 +1,7 @@
+{
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 76))(a2, *a1);// WriteLong
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 76))(a2, a1[1]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 28))(a2, a1[2]);// WriteString
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, a1[3]);// WriteVInt
+  return (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, a1[4]);
+}
