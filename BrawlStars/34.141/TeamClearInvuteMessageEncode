@@ -1,0 +1,4 @@
+{
+  PiranhaMessage::encode();
+  return LogicLong(a1 + 8);
+}
