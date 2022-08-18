@@ -1,0 +1,54 @@
+{
+  int v4; // r6
+  int i; // r7
+  int v6; // r6
+  int j; // r7
+  int v8; // r6
+  int k; // r7
+  int v10; // r6
+  int l; // r7
+
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *(_DWORD *)a1);// WriteVInt
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 32))(a2, *(unsigned __int8 *)(a1 + 4));// WriteBoolean
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *(_DWORD *)(a1 + 8));// WriteVInt
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 76))(a2, *(_DWORD *)(a1 + 0xC));// WriteLong
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *(_DWORD *)(a1 + 0x10));// WriteVInt
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 32))(a2, *(unsigned __int8 *)(a1 + 5));// WriteBoolean
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 32))(a2, *(unsigned __int8 *)(a1 + 6));// WriteBoolean
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *(_DWORD *)(a1 + 0x14));// WriteVInt
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *(_DWORD *)(a1 + 0x18));// WriteVInt
+  WriteDataReference(a2, *(_DWORD *)(a1 + 0x1C));
+  BattlePlayerMap::encode(a2, *(_DWORD **)(a1 + 0x34));// BattlePlayerMap 
+                                                // Boolean = False
+  v4 = *(_DWORD *)(*(_DWORD *)(a1 + 32) + 8);
+  (*(void (__fastcall **)(int, int))(*(_DWORD *)a2 + 64))(a2, v4);// WriteVInt
+  if ( v4 >= 1 )
+  {
+    for ( i = 0; i != v4; ++i )
+      TeamMemberEntry::encode(*(unsigned __int8 **)(**(_DWORD **)(a1 + 0x20) + 4 * i), a2);
+  }
+  v6 = *(_DWORD *)(*(_DWORD *)(a1 + 0x24) + 8);
+  (*(void (__fastcall **)(int, int))(*(_DWORD *)a2 + 0x40))(a2, v6);// WriteVInt
+  if ( v6 >= 1 )
+  {
+    for ( j = 0; j != v6; ++j )
+      TeamInviteEntry::encode(*(_DWORD **)(**(_DWORD **)(a1 + 0x24) + 4 * j), a2);
+  }
+  v8 = *(_DWORD *)(*(_DWORD *)(a1 + 0x28) + 8);
+  (*(void (__fastcall **)(int, int))(*(_DWORD *)a2 + 0x40))(a2, v8);// WriteVInt
+  if ( v8 >= 1 )
+  {
+    for ( k = 0; k != v8; ++k )
+      TeamJoinRequest::encode(*(_DWORD **)(**(_DWORD **)(a1 + 0x28) + 4 * k), a2);
+  }
+  v10 = *(_DWORD *)(*(_DWORD *)(a1 + 0x30) + 8);
+  (*(void (__fastcall **)(int, int))(*(_DWORD *)a2 + 0x40))(a2, v10);// WriteVInt
+  if ( v10 >= 1 )
+  {
+    for ( l = 0; l != v10; ++l )
+      (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(**(_DWORD **)(a1 + 0x30) + 4 * l));// WriteVInt
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 32))(a2, *(unsigned __int8 *)(a1 + 0x2C));// WriteBoolean
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 32))(a2, *(unsigned __int8 *)(a1 + 0x2D));// WriteBoolean
+  return (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 32))(a2, *(unsigned __int8 *)(a1 + 0x2E));// WriteBoolean
+}
