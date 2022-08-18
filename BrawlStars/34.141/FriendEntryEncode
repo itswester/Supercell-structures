@@ -1,0 +1,39 @@
+{
+  void (__fastcall *v4)(int, int); // r2
+  int result; // r0
+
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 76))(a2, *a1);// WriteLong
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 28))(a2, a1[1]);// WriteString
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 28))(a2, a1[2]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 28))(a2, a1[3]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 28))(a2, a1[4]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 28))(a2, a1[5]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 28))(a2, a1[6]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 36))(a2, a1[7]);// WriteInt
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 36))(a2, a1[8]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 36))(a2, a1[9]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 36))(a2, a1[0xA]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 36))(a2, a1[0xB]);
+  v4 = *(void (__fastcall **)(int, int))(*(_DWORD *)a2 + 32);// WriteBoolean
+  if ( a1[0xE] )
+  {
+    v4(a2, 1);
+    (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 76))(a2, a1[0xE]);
+    (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 36))(a2, a1[0xF]);
+    (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 28))(a2, a1[0x10]);
+    (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 36))(a2, a1[0x11]);
+    (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 36))(a2, a1[0x12]);
+  }
+  else
+  {
+    v4(a2, 0);
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 28))(a2, a1[0x13]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 36))(a2, a1[0xC]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 36))(a2, a1[0xD]);
+  (*(void (__fastcall **)(int, bool))(*(_DWORD *)a2 + 32))(a2, a1[0x18] != 0);
+  result = a1[0x18];
+  if ( result )
+    result = PlayerDisplayData::encode((_DWORD *)result, a2);
+  return result;
+}
