@@ -1,0 +1,7 @@
+{
+  LogicCommand::encode();
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, a1[6]);// WriteVInt
+  WriteDataReference(a2, a1[7]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, a1[8]);
+  return (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, a1[9]);
+}
