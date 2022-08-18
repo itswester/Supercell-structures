@@ -1,0 +1,15 @@
+{
+  PiranhaMessage::encode();
+  WriteVInt((_DWORD *)(a1 + 8), *(_DWORD *)(a1 + 0x54));
+  WriteVInt((_DWORD *)(a1 + 8), *(_DWORD *)(a1 + 0x58));
+  WriteVInt((_DWORD *)(a1 + 8), *(_DWORD *)(a1 + 0x50));
+  WriteBoolean(a1 + 8, *(unsigned __int8 *)(a1 + 0x5C));
+  WriteBoolean(a1 + 8, *(_DWORD *)(a1 + 0x60) != 0);
+  if ( *(_DWORD *)(a1 + 0x60) )
+  {
+    LogicLong(a1 + 8);
+    WriteVInt((_DWORD *)(a1 + 8), *(_DWORD *)(a1 + 0x64));
+    WriteDataReference(a1 + 8, *(_DWORD *)(a1 + 0x68));
+  }
+  return LogicLong_0(a1 + 8, a1 + 0x6C);
+}
