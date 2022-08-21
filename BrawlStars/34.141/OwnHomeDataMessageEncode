@@ -1,3 +1,4 @@
 PiranhaMessage::encode 
 LogicClientHome::encode #Checksum Encoder
 ByteStream::WriteVInt
+LogicClientAvatar::encode #Checksum Encoder
