@@ -1,3 +1,4 @@
+m = 1 #Modification count 
 ByteStream::WriteVInt
 ByteStream::WriteVInt
 ByteStream::WriteVInt
@@ -9,4 +10,6 @@ ByteStream::WriteString
 ByteStream::WriteVInt
 ByteStream::WriteVInt(m) #count modificators
 if m >= 1:
-  ByteStream::WriteVInt
+  ByteStream::WriteVInt #Modification ID 
+
+  
