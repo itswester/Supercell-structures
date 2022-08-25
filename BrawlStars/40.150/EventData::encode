@@ -1,0 +1,98 @@
+{
+  _DWORD *v4; // r0
+  int v5; // r6
+  void (__fastcall *v6)(int, int); // r2
+  int v7; // r0
+  int v8; // r0
+  unsigned int v9; // r1
+  int v10; // r0
+  int v11; // r0
+  _DWORD *v12; // r0
+  int v13; // r6
+  int v14; // r0
+  int result; // r0
+
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *a1);// WriteVInt
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, a1[1]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, a1[2]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, a1[3]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, a1[4]);
+  WriteDataReference(a2, a1[5]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, a1[6]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, a1[7]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x1C))(a2, a1[8]);// WriteString
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, a1[9]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, a1[0xA]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, a1[0xB]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1[0xD] + 8));
+  v4 = (_DWORD *)a1[0xD];
+  if ( (int)v4[2] >= 1 )
+  {
+    v5 = 0;
+    do
+    {
+      (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(*v4 + 4 * v5));
+      v4 = (_DWORD *)a1[0xD];
+      ++v5;
+    }
+    while ( v5 < v4[2] );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, a1[0xF]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, a1[0x12]);
+  BattlePlayerMap::encode(a2, a1[0x16]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, a1[0xC]);
+  v6 = *(void (__fastcall **)(int, int))(*(_DWORD *)a2 + 0x20);// WriteBoolean
+  if ( a1[0x17] )
+  {
+    v6(a2, 1);
+    PowerLeageSeasonData::encode(a1[0x17], a2);
+  }
+  else
+  {
+    v6(a2, 0);
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, a1[0x10]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, a1[0x11]);
+  (*(void (__fastcall **)(int, bool))(*(_DWORD *)a2 + 0x20))(a2, a1[0x13] != 0);
+  v7 = a1[0x13];
+  if ( v7 )
+    ChronosTextEntry::encode(v7, a2);
+  (*(void (__fastcall **)(int, bool))(*(_DWORD *)a2 + 0x20))(a2, a1[0x14] != 0);
+  v8 = a1[0x14];
+  if ( v8 )
+    ChronosTextEntry::encode(v8, a2);
+  (*(void (__fastcall **)(int, bool))(*(_DWORD *)a2 + 0x20))(a2, a1[0x18] != 0);
+  v10 = a1[0x18];
+  if ( v10 )
+    LogicGemOffer::encode(v10, a2);
+  v11 = a1[0xE];
+  if ( v11 )
+    v9 = *(_DWORD *)(v11 + 8);
+  if ( !v11 )
+    v9 = 0xFFFFFFFF;
+  (*(void (__fastcall **)(int, unsigned int))(*(_DWORD *)a2 + 0x40))(a2, v9);
+  v12 = (_DWORD *)a1[0xE];
+  if ( v12 && (int)v12[2] >= 1 )
+  {
+    v13 = 0;
+    do
+    {
+      (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(*v12 + 4 * v13));
+      v12 = (_DWORD *)a1[0xE];
+      ++v13;
+    }
+    while ( v13 < v12[2] );
+  }
+  (*(void (__fastcall **)(int, bool))(*(_DWORD *)a2 + 0x20))(a2, a1[0x15] != 0);
+  v14 = a1[0x15];
+  if ( v14 )
+    ChronosFileEntry::encode(v14, a2);
+  (*(void (__fastcall **)(int, bool))(*(_DWORD *)a2 + 0x20))(a2, a1[0x19] != 0);
+  result = a1[0x19];
+  if ( result )
+  {
+    unkeventstruct::encode(result, a2);
+    result = (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, a1[0x1A]);
+  }
+  return result;
+}
