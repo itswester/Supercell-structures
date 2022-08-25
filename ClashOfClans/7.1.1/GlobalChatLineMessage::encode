@@ -1,0 +1,18 @@
+{
+  _DWORD *v2; // r0
+
+  nullsub_286();
+  WriteStirng(a1 + 2, a1[0xC]);
+  WriteStirng(a1 + 2, a1[0xD]);
+  WriteInt(a1 + 2, a1[0xE]);
+  WriteInt(a1 + 2, a1[0xF]);
+  WriteLong(a1 + 2, a1[0x10]);
+  WriteLong(a1 + 2, a1[0x11]);
+  v2 = a1 + 2;
+  if ( !a1[0x12] )
+    return WriteBoolean(v2, 0);
+  WriteBoolean(v2, 1);
+  WriteLong(a1 + 2, a1[0x12]);
+  WriteStirng(a1 + 2, a1[0x13]);
+  return WriteInt(a1 + 2, a1[0x14]);
+}
