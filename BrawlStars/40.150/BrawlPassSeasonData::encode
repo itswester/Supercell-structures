@@ -1,0 +1,25 @@
+{
+  void (__fastcall *v4)(int, int); // r2
+  int (__fastcall *v5)(int, int); // r2
+
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *(_DWORD *)a1);// WriteVInt
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *(_DWORD *)(a1 + 4));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 32))(a2, *(unsigned __int8 *)(a1 + 0x10));// WriteBoolean
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *(_DWORD *)(a1 + 0x14));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 32))(a2, *(unsigned __int8 *)(a1 + 0x18));
+  v4 = *(void (__fastcall **)(int, int))(*(_DWORD *)a2 + 32);
+  if ( *(_DWORD *)(a1 + 8) )
+  {
+    v4(a2, 1);
+    LogicBitList::encode(*(int **)(a1 + 8), a2);
+  }
+  else
+  {
+    v4(a2, 0);
+  }
+  v5 = *(int (__fastcall **)(int, int))(*(_DWORD *)a2 + 32);
+  if ( !*(_DWORD *)(a1 + 0xC) )
+    return v5(a2, 0);
+  v5(a2, 1);
+  return LogicBitList::encode(*(int **)(a1 + 12), a2);
+}
