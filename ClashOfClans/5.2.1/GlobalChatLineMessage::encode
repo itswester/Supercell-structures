@@ -1,0 +1,15 @@
+{
+  PiranhaMessage::encode(this);
+  ByteStream::writeString((GlobalChatLineMessage *)((char *)this + 8), *((String **)this + 0xC));
+  ByteStream::writeString((GlobalChatLineMessage *)((char *)this + 8), *((String **)this + 0xD));
+  ByteStream::writeInt((GlobalChatLineMessage *)((char *)this + 8), *((_DWORD *)this + 0xE));
+  ByteStream::writeInt((GlobalChatLineMessage *)((char *)this + 8), *((_DWORD *)this + 0xF));
+  ChecksumEncoder::writeLong((GlobalChatLineMessage *)((char *)this + 8), *((const LogicLong **)this + 0x10));
+  ChecksumEncoder::writeLong((GlobalChatLineMessage *)((char *)this + 8), *((const LogicLong **)this + 0x11));
+  if ( !*((_DWORD *)this + 0x12) )
+    return ByteStream::writeBoolean((GlobalChatLineMessage *)((char *)this + 8), 0);
+  ByteStream::writeBoolean((GlobalChatLineMessage *)((char *)this + 8), 1);
+  ChecksumEncoder::writeLong((GlobalChatLineMessage *)((char *)this + 8), *((const LogicLong **)this + 0x12));
+  ByteStream::writeString((GlobalChatLineMessage *)((char *)this + 8), *((String **)this + 0x13));
+  return ByteStreamHelper::writeDataReference((int)this + 8, *((LogicData **)this + 0x14));
+}
