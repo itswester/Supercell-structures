@@ -1,2 +1,3 @@
-LogicClientHome::encode 
+LogicClientHome::encode
+LogicClientAvatar::encode
 ByteStream::WriteVInt
