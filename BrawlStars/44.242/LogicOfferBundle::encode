@@ -1,0 +1,34 @@
+{
+  int v4; // r6
+
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0xC));//WriteVInt
+  if ( *(int *)(a1 + 0xC) >= 1 )
+  {
+    v4 = 0;
+    do
+      LogicGemOffer::encode(*(_DWORD *)(*(_DWORD *)(a1 + 4) + 4 * v4++), a2);
+    while ( v4 < *(_DWORD *)(a1 + 0xC) );
+  }
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x14));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x10));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x18));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x1C));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x20));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x20))(a2, *(unsigned __int8 *)(a1 + 0x24));//WriteBoolean
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x28));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x2C));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x20))(a2, *(unsigned __int8 *)(a1 + 0x30));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x40));
+  ChronosTextEntry::encode(*(_DWORD *)(a1 + 0x34), a2);
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x20))(a2, *(unsigned __int8 *)(a1 + 0x48));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x1C))(a2, *(_DWORD *)(a1 + 0x38));//WriteString
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x44));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x20))(a2, *(unsigned __int8 *)(a1 + 0x5E));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x4C));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x50));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x1C))(a2, *(_DWORD *)(a1 + 0x3C));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x20))(a2, *(unsigned __int8 *)(a1 + 0x5C));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x20))(a2, *(unsigned __int8 *)(a1 + 0x5D));
+  WriteDataReference(a2, *(_DWORD *)(a1 + 84));
+  return WriteDataReference(a2, *(_DWORD *)(a1 + 88));
+}
