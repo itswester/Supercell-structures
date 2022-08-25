@@ -1,0 +1,41 @@
+{
+  int v4; // r6
+  int i; // r7
+  int v6; // r6
+  int j; // r7
+  int v8; // r6
+  int k; // r7
+
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *(_DWORD *)a1);// WriteVInt
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 32))(a2, *(unsigned __int8 *)(a1 + 4));// WriteBoolean
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *(_DWORD *)(a1 + 8));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 72))(a2, *(_DWORD *)(a1 + 0xC));// WriteLong
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *(_DWORD *)(a1 + 0x10));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 32))(a2, *(unsigned __int8 *)(a1 + 5));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 32))(a2, *(unsigned __int8 *)(a1 + 6));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *(_DWORD *)(a1 + 0x14));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *(_DWORD *)(a1 + 0x18));
+  WriteDataReference(a2, *(_DWORD *)(a1 + 0x1C));
+  v4 = *(_DWORD *)(*(_DWORD *)(a1 + 32) + 8);
+  (*(void (__fastcall **)(int, int))(*(_DWORD *)a2 + 64))(a2, v4);
+  if ( v4 >= 1 )
+  {
+    for ( i = 0; i != v4; ++i )
+      TeamMemberEntry::encode(*(_DWORD *)(**(_DWORD **)(a1 + 32) + 4 * i), a2);
+  }
+  v6 = *(_DWORD *)(*(_DWORD *)(a1 + 36) + 8);
+  (*(void (__fastcall **)(int, int))(*(_DWORD *)a2 + 64))(a2, v6);
+  if ( v6 >= 1 )
+  {
+    for ( j = 0; j != v6; ++j )
+      TeamInviteEntry::encode(*(_DWORD *)(**(_DWORD **)(a1 + 36) + 4 * j), a2);
+  }
+  v8 = *(_DWORD *)(*(_DWORD *)(a1 + 40) + 8);
+  (*(void (__fastcall **)(int, int))(*(_DWORD *)a2 + 64))(a2, v8);
+  if ( v8 >= 1 )
+  {
+    for ( k = 0; k != v8; ++k )
+      TeamJoinRequest::encode(*(_DWORD **)(**(_DWORD **)(a1 + 40) + 4 * k), a2);
+  }
+  return (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 32))(a2, *(unsigned __int8 *)(a1 + 0x2C));
+}
