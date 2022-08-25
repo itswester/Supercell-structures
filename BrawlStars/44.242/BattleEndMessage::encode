@@ -1,0 +1,134 @@
+{
+  int v2; // r1
+  int v3; // r1
+  int v4; // r6
+  int i; // r7
+  int v6; // r0
+  int v7; // r6
+  int j; // r7
+  int v9; // r0
+  int v10; // r6
+  int k; // r7
+  int v12; // r0
+  int v13; // r6
+  int l; // r7
+  int v15; // r0
+  _DWORD *v16; // r0
+  int v17; // r0
+  int v18; // r0
+
+  sub_4A39FC(); //PiranhaMessage::encode
+  WriteLong(a1 + 8, v2, *(_DWORD *)(a1 + 0x58), *(_DWORD *)(a1 + 0x5C));
+  WriteLong(a1 + 8, v3, *(_DWORD *)(a1 + 0x60), *(_DWORD *)(a1 + 0x64));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0x68));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0x6C));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0x70));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0x74));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0x78));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0x7C));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0x80));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0x84));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0x88));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0x8C));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0x90));
+  if ( *(_DWORD *)(a1 + 0xA0) )
+  {
+    WriteBoolean(a1 + 8, 1);
+    LogicGemOffer::encode(*(_DWORD *)(a1 + 0xA0), a1 + 8);
+  }
+  else
+  {
+    WriteBoolean(a1 + 8, 0);
+  }
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0x94));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0x98));
+  WriteBoolean(a1 + 8, *(unsigned __int8 *)(a1 + 0x9C));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0xA4));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0xA8));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0xAC));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0xB0));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0xB4));
+  WriteBoolean(a1 + 8, *(unsigned __int8 *)(a1 + 0xBC));
+  WriteBoolean(a1 + 8, *(unsigned __int8 *)(a1 + 0xBD));
+  WriteBoolean(a1 + 8, *(unsigned __int8 *)(a1 + 0xBE));
+  WriteBoolean(a1 + 8, *(unsigned __int8 *)(a1 + 0xBF));
+  WriteBoolean(a1 + 8, *(unsigned __int8 *)(a1 + 0xC0));
+  WriteBoolean(a1 + 8, *(unsigned __int8 *)(a1 + 0xC1));
+  WriteBoolean(a1 + 8, *(unsigned __int8 *)(a1 + 0xC2));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0xC4));
+  WriteBoolean(a1 + 8, *(unsigned __int8 *)(a1 + 0xC8));
+  v4 = *(_DWORD *)(*(_DWORD *)(a1 + 0xCC) + 8);
+  WriteVInt(a1 + 8, v4);
+  if ( v4 >= 1 )
+  {
+    for ( i = 0; i != v4; ++i )
+      PlayerEntry::encode(*(_DWORD *)(**(_DWORD **)(a1 + 0xCC) + 4 * i), a1 + 8);
+  }
+  v6 = *(_DWORD *)(a1 + 0xD0);
+  if ( v6 )
+  {
+    v7 = *(_DWORD *)(v6 + 8);
+    WriteVInt(a1 + 8, v7);
+    if ( v7 >= 1 )
+    {
+      for ( j = 0; j != v7; ++j )
+        XpEntry::encode(*(_DWORD *)(**(_DWORD **)(a1 + 0xD0) + 4 * j), a1 + 8);
+    }
+  }
+  else
+  {
+    WriteVInt(a1 + 8, 0);
+  }
+  v9 = *(_DWORD *)(a1 + 0xD4);
+  if ( v9 )
+  {
+    v10 = *(_DWORD *)(v9 + 8);
+    WriteVInt(a1 + 8, v10);
+    if ( v10 >= 1 )
+    {
+      for ( k = 0; k != v10; ++k )
+        WriteDataReference(a1 + 8, *(_DWORD *)(**(_DWORD **)(a1 + 0xD4) + 4 * k));
+    }
+  }
+  else
+  {
+    WriteVInt(a1 + 8, 0);
+  }
+  v12 = *(_DWORD *)(a1 + 0xD8);
+  if ( v12 )
+  {
+    v13 = *(_DWORD *)(v12 + 8);
+    WriteVInt(a1 + 8, v13);
+    if ( v13 >= 1 )
+    {
+      for ( l = 0; l != v13; ++l )
+        LogicMiliestones::encode(*(_DWORD *)(**(_DWORD **)(a1 + 0xD8) + 4 * l), a1 + 8);
+    }
+  }
+  else
+  {
+    WriteVInt(a1 + 8, 0);
+  }
+  WriteDataReference(a1 + 8, *(_DWORD *)(a1 + 0xDC));
+  WriteBoolean(a1 + 8, *(_DWORD *)(a1 + 0xE0) != 0);
+  v15 = *(_DWORD *)(a1 + 0xE0);
+  if ( v15 )
+    PlayAgainStatus::encode(v15, a1 + 8);
+  WriteBoolean(a1 + 8, *(_DWORD *)(a1 + 0xE4) != 0);
+  v16 = *(_DWORD **)(a1 + 0xE4);
+  if ( v16 )
+    LogicQuests::encode(v16, a1 + 8);
+  WriteBoolean(a1 + 8, *(unsigned __int8 *)(a1 + 0xE8));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0xF0));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0xF4));
+  WriteBoolean(a1 + 8, *(_DWORD *)(a1 + 0xEC) != 0);
+  v17 = *(_DWORD *)(a1 + 0xEC);
+  if ( v17 )
+    LogicRankedMatchRoundState::encode(v17, a1 + 8);
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0xF8));
+  WriteBoolean(a1 + 8, *(_DWORD *)(a1 + 0xFC) != 0);
+  v18 = *(_DWORD *)(a1 + 0xFC);
+  if ( v18 )
+    ChronosTextEntry::encode(v18, a1 + 8);
+  return WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0xB8));
+}
