@@ -1,11 +1,11 @@
-ByteStream::WriteVInt  #RewardCount
+ByteStream::WriteVInt(RewardCount)  #RewardCount
 
 #LogicGemOffer::encode start
-
-ByteStream::WriteVInt #Type
-ByteStream::WriteVInt #Count
-ByteStreamHelper::WriteDataReference #ID DataReference
-ByteStream::WriteVInt #Extra
+for x in range(RewardCount):
+  ByteStream::WriteVInt #Type
+  ByteStream::WriteVInt #Count
+  ByteStreamHelper::WriteDataReference #ID DataReference
+  ByteStream::WriteVInt #Extra
 
 #LogicGemOffer::encode end
 
