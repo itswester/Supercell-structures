@@ -8,10 +8,10 @@ ByteStream::WriteVInt
 ByteStreamHelper::WriteDataReference
 ByteStream::WriteVInt
 ByteStream::WriteVInt(b) #Count 
-if b >= 1:
+for x in range(b):
   ByteStreamHelper::WriteDataReference
 ByteStream::WriteVInt(b) #Count 
-if b >= 1:
+for x in range(b):
   ByteStreamHelper::WriteDataReference
 ByteStream::WriteBoolean
 ByteStream::WriteVInt
@@ -34,10 +34,10 @@ ByteStream::WriteVInt
 ByteStream::WriteVInt
 ByteStream::WriteBoolean
 ByteStream::WriteVInt(b) #Offers Count Array
-if b >= 1:
+for x in range(b):
   LogicOfferBundle::encode
 ByteStream::WriteVInt(b) #Ad Status
-if b >= 1:
+for x in range(b)
   AdStatus::encode
 ByteStream::WriteVInt
 ByteStream::WriteVInt
