@@ -1,0 +1,5 @@
+{
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 68))(a2, *a1);// WriteVInt
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 68))(a2, a1[1]);
+  return (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 68))(a2, a1[2]);
+}
