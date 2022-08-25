@@ -1,0 +1,13 @@
+{
+  int v2; // r0
+
+  nullsub_30();
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0x50));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0x54));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0x58));
+  WriteVInt(a1 + 8, *(_DWORD *)(a1 + 0x5C));
+  WriteBoolean(a1 + 8, *(unsigned __int8 *)(a1 + 0x60));
+  BitStream::getByteArray(*(_DWORD *)(a1 + 0x4C));
+  BitStream::getLenght(*(_DWORD *)(a1 + 0x4C));
+  return WriteBytes(v2);
+}
