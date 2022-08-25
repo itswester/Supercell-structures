@@ -9,7 +9,6 @@ ByteStream::WriteVInt
 ByteStream::WriteString
 ByteStream::WriteVInt
 ByteStream::WriteVInt(m) #count modificators
-if m >= 1:
-  ByteStream::WriteVInt #Modification ID 
-
+for x in range(m):
+  ByteStream::WriteVInt #Modificator ID 
   
