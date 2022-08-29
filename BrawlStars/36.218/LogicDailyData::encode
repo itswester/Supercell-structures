@@ -1,0 +1,244 @@
+{
+  int v4; // r6
+  int v5; // r6
+  int v6; // r8
+  _DWORD *v7; // r0
+  _DWORD *v8; // r9
+  int v9; // r6
+  int v10; // r7
+  _DWORD *v11; // r2
+  int v12; // r1
+  int v13; // r0
+  _DWORD *v14; // r1
+  int v15; // r6
+  int v16; // r6
+  int v17; // r6
+  int v18; // r0
+  int v19; // r0
+  _DWORD *v20; // r0
+  int v21; // r6
+  _DWORD *v22; // r0
+  int v23; // r6
+  int v24; // r6
+  int v25; // r6
+  int v26; // r6
+  int v27; // r6
+  int v28; // r6
+  _DWORD *v29; // r0
+  int v30; // r0
+  _DWORD *v31; // r0
+
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)a1);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 4));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 8));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xC));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x10));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x14));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x18));
+  ZN16ByteStreamHelper18writeDataReferenceEP15ChecksumEncoderPK9LogicData(a2, *(_DWORD *)(a1 + 0x1C));
+  ZN16ByteStreamHelper18writeDataReferenceEP15ChecksumEncoderPK9LogicData(a2, *(_DWORD *)(a1 + 0x20));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x2C));
+  if ( *(int *)(a1 + 0x2C) >= 1 )
+  {
+    v4 = 0;
+    do
+      (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(*(_DWORD *)(a1 + 0x24) + 4 * v4++));
+    while ( v4 < *(_DWORD *)(a1 + 0x2C) );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x38));
+  if ( *(int *)(a1 + 0x38) >= 1 )
+  {
+    v5 = 0;
+    do
+      ZN16ByteStreamHelper18writeDataReferenceEP15ChecksumEncoderPK9LogicData(
+        a2,
+        *(_DWORD *)(*(_DWORD *)(a1 + 0x30) + 4 * v5++));
+    while ( v5 < *(_DWORD *)(a1 + 0x38) );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x44));
+  if ( *(int *)(a1 + 0x44) > 0 )
+  {
+    v6 = ZNK11LogicMapIntIPK13LogicSkinDataE7getKeysEv(a1 + 0x3C);
+    v7 = *(_DWORD **)v6;
+    if ( *(int *)(v6 + 8) >= 1 )
+    {
+      v8 = (_DWORD *)(a1 + 0x40);
+      v9 = 0;
+      do
+      {
+        v10 = v7[v9];
+        (*(void (__fastcall **)(int, int))(*(_DWORD *)a2 + 0x40))(a2, v10);
+        v11 = (_DWORD *)*v8;
+        v12 = 0;
+        if ( *v8 )
+        {
+          v13 = a1 + 0x40;
+          do
+          {
+            v14 = v11;
+            if ( v11[4] >= v10 )
+              v13 = (int)v11;
+            else
+              v14 = v11 + 1;
+            v11 = (_DWORD *)*v14;
+          }
+          while ( *v14 );
+          v12 = 0;
+          if ( (_DWORD *)v13 != v8 )
+          {
+            v12 = 0;
+            if ( v10 >= *(_DWORD *)(v13 + 0x10) )
+              v12 = *(_DWORD *)(v13 + 0x14);
+          }
+        }
+        ZN16ByteStreamHelper18writeDataReferenceEP15ChecksumEncoderPK9LogicData(a2, v12);
+        v7 = *(_DWORD **)v6;
+        ++v9;
+      }
+      while ( v9 < *(_DWORD *)(v6 + 8) );
+    }
+    if ( v7 )
+      operator delete[](v7);
+    std::__function::__func<miit::com::bun::miitmdid::interfaces::IIdentifierListener::invoke(_jmethodID *,_jobjectArray *)::$_0,std::allocator<miit::com::bun::miitmdid::interfaces::IIdentifierListener::invoke(_jmethodID *,_jobjectArray *)::$_0>,void ()(safe_jni::Proxy &,bool,miit::com::bun::miitmdid::interfaces::IdSupplier)>::~__func(v6);
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x50));
+  if ( *(int *)(a1 + 0x50) >= 1 )
+  {
+    v15 = 0;
+    do
+      ZN16ByteStreamHelper18writeDataReferenceEP15ChecksumEncoderPK9LogicData(
+        a2,
+        *(_DWORD *)(*(_DWORD *)(a1 + 0x48) + 4 * v15++));
+    while ( v15 < *(_DWORD *)(a1 + 0x50) );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x5C));
+  if ( *(int *)(a1 + 0x5C) >= 1 )
+  {
+    v16 = 0;
+    do
+      ZN16ByteStreamHelper18writeDataReferenceEP15ChecksumEncoderPK9LogicData(
+        a2,
+        *(_DWORD *)(*(_DWORD *)(a1 + 0x54) + 4 * v16++));
+    while ( v16 < *(_DWORD *)(a1 + 0x5C) );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x68));
+  if ( *(int *)(a1 + 0x68) >= 1 )
+  {
+    v17 = 0;
+    do
+      ZN16ByteStreamHelper18writeDataReferenceEP15ChecksumEncoderPK9LogicData(
+        a2,
+        *(_DWORD *)(*(_DWORD *)(a1 + 0x60) + 4 * v17++));
+    while ( v17 < *(_DWORD *)(a1 + 0x68) );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x70));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x74));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x78));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x7C));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x20))(a2, *(unsigned __int8 *)(a1 + 0x6C));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x80));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x84));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x88));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x8C));
+  ZN11ForcedDrops6encodeEP15ChecksumEncoder(*(_DWORD *)(a1 + 0x90), a2);
+  (*(void (__fastcall **)(int, bool))(*(_DWORD *)a2 + 0x20))(a2, *(_DWORD *)(a1 + 0x94) != 0);
+  v18 = *(_DWORD *)(a1 + 0x94);
+  if ( v18 )
+    ZN10TimedOffer6encodeEP10ByteStream(v18, a2);
+  (*(void (__fastcall **)(int, bool))(*(_DWORD *)a2 + 0x20))(a2, *(_DWORD *)(a1 + 0x98) != 0);
+  v19 = *(_DWORD *)(a1 + 0x98);
+  if ( v19 )
+    ZN10TimedOffer6encodeEP10ByteStream(v19, a2);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x20))(a2, *(unsigned __int8 *)(a1 + 0x9C));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xA0));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xA4));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xA8));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xAC));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xB0));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(*(_DWORD *)(a1 + 0xB4) + 8));
+  v20 = *(_DWORD **)(a1 + 0xB4);
+  if ( (int)v20[2] >= 1 )
+  {
+    v21 = 0;
+    do
+    {
+      ZN16LogicOfferBundle6encodeEP15ChecksumEncoder(*(_DWORD *)(*v20 + 4 * v21), a2);
+      v20 = *(_DWORD **)(a1 + 0xB4);
+      ++v21;
+    }
+    while ( v21 < v20[2] );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(*(_DWORD *)(a1 + 0xB8) + 8));
+  v22 = *(_DWORD **)(a1 + 0xB8);
+  if ( (int)v22[2] >= 1 )
+  {
+    v23 = 0;
+    do
+    {
+      ZN8AdStatus6encodeEP15ChecksumEncoder(*(_DWORD *)(*v22 + 4 * v23), a2);
+      v22 = *(_DWORD **)(a1 + 0xB8);
+      ++v23;
+    }
+    while ( v23 < v22[2] );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xBC));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xC0));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xCC));
+  if ( *(int *)(a1 + 0xCC) >= 1 )
+  {
+    v24 = 0;
+    do
+      (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(*(_DWORD *)(a1 + 0xC4) + 4 * v24++));
+    while ( v24 < *(_DWORD *)(a1 + 0xCC) );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xD0));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xD4));
+  ZN16ByteStreamHelper18writeDataReferenceEP15ChecksumEncoderPK9LogicData(a2, *(_DWORD *)(a1 + 0xD8));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 28))(a2, *(_DWORD *)(a1 + 0xE0));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 28))(a2, *(_DWORD *)(a1 + 0xE4));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xF0));
+  if ( *(int *)(a1 + 0xF0) >= 1 )
+  {
+    v25 = 0;
+    do
+      ZN13IntValueEntry6encodeEP10ByteStream(*(_DWORD *)(*(_DWORD *)(a1 + 0xE8) + 4 * v25++), a2);
+    while ( v25 < *(_DWORD *)(a1 + 0xF0) );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0xFC));
+  if ( *(int *)(a1 + 0xFC) >= 1 )
+  {
+    v26 = 0;
+    do
+      ZN13CooldownEntry6encodeEP15ChecksumEncoder(*(_DWORD *)(*(_DWORD *)(a1 + 0xF4) + 4 * v26++), a2);
+    while ( v26 < *(_DWORD *)(a1 + 0xFC) );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x108));
+  if ( *(int *)(a1 + 0x108) >= 1 )
+  {
+    v27 = 0;
+    do
+      ZN19BrawlPassSeasonData6encodeEP15ChecksumEncoder(*(_DWORD *)(*(_DWORD *)(a1 + 0x100) + 4 * v27++), a2);
+    while ( v27 < *(_DWORD *)(a1 + 0x108) );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x40))(a2, *(_DWORD *)(a1 + 0x114));
+  if ( *(int *)(a1 + 0x114) >= 1 )
+  {
+    v28 = 0;
+    do
+      ZN19ProLeagueSeasonData6encodeEP15ChecksumEncoder(*(_DWORD *)(*(_DWORD *)(a1 + 0x10C) + 4 * v28++), a2);
+    while ( v28 < *(_DWORD *)(a1 + 0x114) );
+  }
+  (*(void (__fastcall **)(int, bool))(*(_DWORD *)a2 + 0x20))(a2, *(_DWORD *)(a1 + 0x118) != 0);
+  v29 = *(_DWORD **)(a1 + 0x118);
+  if ( v29 )
+    ZN11LogicQuests6encodeEP15ChecksumEncoder(v29, a2);
+  (*(void (__fastcall **)(int, bool))(*(_DWORD *)a2 + 0x20))(a2, *(_DWORD *)(a1 + 0x11C) != 0);
+  v30 = *(_DWORD *)(a1 + 0x11C);
+  if ( v30 )
+    ZN11VanityItems6encodeEP15ChecksumEncoder(v30, a2);
+  (*(void (__fastcall **)(int, bool))(*(_DWORD *)a2 + 0x20))(a2, *(_DWORD *)(a1 + 0x120) != 0);
+  v31 = *(_DWORD **)(a1 + 0x120);
+  if ( v31 )
+    ZNK27LogicPlayerRankedSeasonData6encodeEP15ChecksumEncoder(v31, a2);
+  return (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x24))(a2, *(_DWORD *)(a1 + 0x124));
+}
