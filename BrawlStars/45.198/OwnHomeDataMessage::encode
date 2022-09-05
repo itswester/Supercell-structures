@@ -1,0 +1,8 @@
+{
+  int v0; // r4
+
+  ((void (__fastcall *)(int, _DWORD))WriteVInt)(v0 + 4, *(_DWORD *)(v0 + 0x60));
+  ((void (__fastcall *)(int, _DWORD))WriteVInt)(v0 + 4, *(_DWORD *)(v0 + 0x64));
+  LogicClientHome::encode(*(_DWORD *)(v0 + 0x58), v0 + 4);
+  return (*(int (__fastcall **)(_DWORD, int))(**(_DWORD **)(v0 + 92) + 12))(*(_DWORD *)(v0 + 92), v0 + 4);// LogicClientAvatar::encode
+}
