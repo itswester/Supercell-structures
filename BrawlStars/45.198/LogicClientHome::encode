@@ -1,0 +1,80 @@
+{
+  int v4; // r7
+  int v5; // r6
+  int v6; // r0
+  int v7; // r0
+  _DWORD *v8; // r0
+  int v9; // r6
+  int v10; // r6
+  int v11; // r6
+  int *v12; // r7
+  int result; // r0
+
+  ((void (__fastcall *)(_DWORD))LogicDailyData::encode)(*(_DWORD *)(a1 + 0xC));
+  LogicConfData::encode(*(_DWORD *)(a1 + 0x10), (int)a2);
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x50))(a2, *(_DWORD *)(a1 + 8));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x1C));
+  if ( *(int *)(a1 + 0x1C) >= 1 )
+  {
+    v4 = 0;
+    do
+    {
+      v5 = *(_DWORD *)(*(_DWORD *)(a1 + 0x14) + 4 * v4);
+      v6 = (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 8))(v5);
+      (*(void (__fastcall **)(int *, int))(*a2 + 0x44))(a2, v6);
+      (*(void (__fastcall **)(int, int *))(*(_DWORD *)v5 + 0xC))(v5, a2);
+      ++v4;
+    }
+    while ( v4 < *(_DWORD *)(a1 + 0x1C) );
+  }
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x2C));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x20))(a2, *(unsigned __int8 *)(a1 + 0x28));
+  v7 = *(_DWORD *)(a1 + 0x24);
+  if ( v7 )
+  {
+    (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(v7 + 8));
+    v8 = *(_DWORD **)(a1 + 0x24);
+    if ( (int)v8[2] >= 1 )
+    {
+      v9 = 0;
+      do
+      {
+        GatchaDrop::encode(*(_DWORD *)(*v8 + 4 * v9), a2);
+        v8 = *(_DWORD **)(a1 + 0x24);
+        ++v9;
+      }
+      while ( v9 < v8[2] );
+    }
+  }
+  else
+  {
+    (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, 0);
+  }
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x44));
+  if ( *(int *)(a1 + 0x44) >= 1 )
+  {
+    v10 = 0;
+    do
+      WriteDataReference(a2, *(_DWORD *)(*(_DWORD *)(a1 + 0x3C) + 4 * v10++));
+    while ( v10 < *(_DWORD *)(a1 + 0x44) );
+  }
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x50));
+  if ( *(int *)(a1 + 0x50) >= 1 )
+  {
+    v11 = 0;
+    do
+    {
+      v12 = *(int **)(*(_DWORD *)(a1 + 72) + 4 * v11);
+      WriteDataReference(a2, *v12);
+      WriteDataReference(a2, v12[1]);
+      (*(void (__fastcall **)(int *, int))(*a2 + 44))(a2, v12[2]);
+      ++v11;
+    }
+    while ( v11 < *(_DWORD *)(a1 + 0x50) );
+  }
+  (*(void (__fastcall **)(int *, bool))(*a2 + 32))(a2, *(_DWORD *)(a1 + 0x64) != 0);
+  result = *(_DWORD *)(a1 + 0x64);
+  if ( result )
+    result = LogicDailyGifts::encode(result, a2);
+  return result;
+}
