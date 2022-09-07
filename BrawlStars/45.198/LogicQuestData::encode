@@ -1,0 +1,18 @@
+(*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, a1[1]);//WriteVInt
+(*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, a1[2]);
+(*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, a1[3]);
+(*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, a1[4]);
+(*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, a1[5]);
+WriteDataReference(a2, a1[6]);
+(*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, a1[7]);
+return (*(int (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, a1[8]);
+LogicGemOffer::encode(*(_DWORD **)(a1 + 0x24), a2);//VInt , VInt , DataRef , VInt
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x28));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x2C));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x30));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x34));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x20))(a2, *(unsigned __int8 *)(a1 + 0x38));//WriteBoolean
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x20))(a2, *(unsigned __int8 *)(a1 + 0x39));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x20))(a2, *(unsigned __int8 *)(a1 + 0x3A));
+(*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x40));
+return (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x3C));
