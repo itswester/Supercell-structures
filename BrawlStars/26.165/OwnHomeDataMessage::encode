@@ -1,0 +1,9 @@
+{
+  int v1; // r4
+
+  v1 = a1;
+  PiranhaMessage::encode();
+  logicClientHome::encode(*(_DWORD *)(v1 + 80), v1 + 8);
+  (*(void (**)(void))(**(_DWORD **)(v1 + 84) + 12))();// LogicClientAvatar::encode
+  return writeVInt((_DWORD *)(v1 + 8), *(_DWORD *)(v1 + 88));
+}
