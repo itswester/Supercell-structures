@@ -1,0 +1,69 @@
+{
+  int v2; // r5
+  int v3; // r4
+  int v4; // r7
+  int v5; // r6
+  int v6; // r0
+  int v7; // r0
+  _DWORD *v8; // r0
+  int v9; // r6
+  signed int result; // r0
+  signed int v11; // r6
+
+  v2 = a1;
+  v3 = a2;
+  LogicDailyData::encode(*(_DWORD *)(a1 + 12));
+  LogicConfData::encode(*(_DWORD *)(v2 + 16), v3);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 72))(v3, *(_DWORD *)(v2 + 8));// WriteLong
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, *(_DWORD *)(v2 + 28));// WriteVInt
+  if ( *(_DWORD *)(v2 + 28) >= 1 )
+  {
+    v4 = 0;
+    do
+    {
+      v5 = *(_DWORD *)(*(_DWORD *)(v2 + 20) + 4 * v4);
+      v6 = (*(int (__fastcall **)(_DWORD))(*(_DWORD *)v5 + 8))(*(_DWORD *)(*(_DWORD *)(v2 + 20) + 4 * v4));
+      (*(void (__fastcall **)(int, int))(*(_DWORD *)v3 + 64))(v3, v6);
+      (*(void (__fastcall **)(int, int))(*(_DWORD *)v5 + 12))(v5, v3);
+      ++v4;
+    }
+    while ( v4 < *(_DWORD *)(v2 + 28) );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, *(_DWORD *)(v2 + 44));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 32))(v3, *(unsigned __int8 *)(v2 + 40));// WriteBoolean
+  v7 = *(_DWORD *)(v2 + 36);
+  if ( v7 )
+  {
+    (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, *(_DWORD *)(v7 + 8));
+    v8 = *(_DWORD **)(v2 + 36);
+    if ( v8[2] >= 1 )
+    {
+      v9 = 0;
+      do
+      {
+        GatchaDrop::encode(*(_DWORD *)(*v8 + 4 * v9), v3);
+        v8 = *(_DWORD **)(v2 + 36);
+        ++v9;
+      }
+      while ( v9 < v8[2] );
+    }
+  }
+  else
+  {
+    (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, 0);
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, *(_DWORD *)(v2 + 68));
+  result = *(_DWORD *)(v2 + 68);
+  if ( result >= 1 )
+  {
+    v11 = 0;
+    do
+    {
+      writeDataReference(v3, *(_DWORD *)(*(_DWORD *)(v2 + 60) + 4 * v11));
+      result = *(_DWORD *)(v2 + 68);
+      ++v11;
+    }
+    while ( v11 < result );
+  }
+  return result;
+}
