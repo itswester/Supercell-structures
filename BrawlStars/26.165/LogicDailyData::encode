@@ -1,0 +1,164 @@
+{
+  _DWORD *v2; // r5
+  int v3; // r4
+  int v4; // r6
+  int v5; // r6
+  int v6; // r6
+  int v7; // r6
+  _DWORD *v8; // r0
+  int v9; // r6
+  _DWORD *v10; // r0
+  int v11; // r6
+  int v12; // r6
+  int v13; // r6
+  int v14; // r6
+  int v15; // r6
+  int v16; // r6
+  _DWORD *result; // r0
+
+  v2 = a1;
+  v3 = a2;
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 64))(a2, *a1);// writeVInt
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[1]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[2]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[3]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[4]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[5]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[6]);
+  writeDataReference(v3, v2[7]);
+  writeDataReference(v3, v2[8]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[11]);
+  if ( v2[11] >= 1 )
+  {
+    v4 = 0;
+    do
+      (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, *(_DWORD *)(v2[9] + 4 * v4++));
+    while ( v4 < v2[11] );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[14]);
+  if ( v2[14] >= 1 )
+  {
+    v5 = 0;
+    do
+      writeDataReference(v3, *(_DWORD *)(v2[12] + 4 * v5++));
+    while ( v5 < v2[14] );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[17]);
+  if ( v2[17] >= 1 )
+  {
+    v6 = 0;
+    do
+      writeDataReference(v3, *(_DWORD *)(v2[15] + 4 * v6++));
+    while ( v6 < v2[17] );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[20]);
+  if ( v2[20] >= 1 )
+  {
+    v7 = 0;
+    do
+      writeDataReference(v3, *(_DWORD *)(v2[18] + 4 * v7++));
+    while ( v7 < v2[20] );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[22]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[23]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[24]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 32))(v3, *((unsigned __int8 *)v2 + 86));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[25]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 32))(v3, *((unsigned __int8 *)v2 + 84));// writeBoolean
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[26]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[27]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[28]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[29]);
+  ForcedDrops::encode(v2[30], v3);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 32))(v3, *((unsigned __int8 *)v2 + 85));
+  (*(void (__fastcall **)(int, bool))(*(_DWORD *)v3 + 32))(v3, v2[31] != 0);
+  if ( v2[31] )
+    TimedOffer::encode();
+  (*(void (__fastcall **)(int, bool))(*(_DWORD *)v3 + 32))(v3, v2[32] != 0);
+  if ( v2[32] )
+    TimedOffer::encode();
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 32))(v3, *((unsigned __int8 *)v2 + 132));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[34]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[35]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[36]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[37]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[38]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, *(_DWORD *)(v2[39] + 8));
+  v8 = (_DWORD *)v2[39];
+  if ( v8[2] >= 1 )
+  {
+    v9 = 0;
+    do
+    {
+      LogicOfferBundle::encode(*(_DWORD *)(*v8 + 4 * v9), v3);
+      v8 = (_DWORD *)v2[39];
+      ++v9;
+    }
+    while ( v9 < v8[2] );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, *(_DWORD *)(v2[40] + 8));
+  v10 = (_DWORD *)v2[40];
+  if ( v10[2] >= 1 )
+  {
+    v11 = 0;
+    do
+    {
+      AdStatus::encode(*(_DWORD *)(*v10 + 4 * v11), v3);
+      v10 = (_DWORD *)v2[40];
+      ++v11;
+    }
+    while ( v11 < v10[2] );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[41]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[42]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[45]);
+  if ( v2[45] >= 1 )
+  {
+    v12 = 0;
+    do
+      (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, *(_DWORD *)(v2[43] + 4 * v12++));
+    while ( v12 < v2[45] );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[46]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[47]);
+  writeDataReference(v3, v2[48]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 28))(v3, v2[50]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 28))(v3, v2[51]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[54]);
+  if ( v2[54] >= 1 )
+  {
+    v13 = 0;
+    do
+      IntValueEntry::encode(*(_DWORD *)(v2[52] + 4 * v13++), v3);
+    while ( v13 < v2[54] );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[57]);
+  if ( v2[57] >= 1 )
+  {
+    v14 = 0;
+    do
+      CooldownEntry::encode(*(_DWORD *)(v2[55] + 4 * v14++), v3);
+    while ( v14 < v2[57] );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[60]);
+  if ( v2[60] >= 1 )
+  {
+    v15 = 0;
+    do
+      Boxes::encode(*(_DWORD **)(v2[58] + 4 * v15++), v3);
+    while ( v15 < v2[60] );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 64))(v3, v2[63]);
+  if ( v2[63] >= 1 )
+  {
+    v16 = 0;
+    do
+      ProLeagueSeasonData::encode(*(_DWORD **)(v2[61] + 4 * v16++), v3);
+    while ( v16 < v2[63] );
+  }
+  (*(void (__fastcall **)(int, bool))(*(_DWORD *)v3 + 32))(v3, v2[64] != 0);
+  result = (_DWORD *)v2[64];
+  if ( result )
+    result = (_DWORD *)VanityItems::encode(result, v3);
+  return result;
+}
