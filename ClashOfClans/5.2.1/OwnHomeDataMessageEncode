@@ -3,4 +3,4 @@ ByteStream::writeInt((OwnHomeDataMessage *)((char *)this + 8), *((_DWORD *)this 
 LogicClientHome::encode(*((LogicClientHome **)this + 0xD), (OwnHomeDataMessage *)((char *)this + 8));
 return (*(int (__fastcall **)(_DWORD, char *))(**((_DWORD **)this + 0xE) + 8))(
          *((_DWORD *)this + 0xE),
-         (char *)this + 8);
+         (char *)this + 8); //LogicClientAvatar::encode
