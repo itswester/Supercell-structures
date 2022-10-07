@@ -1,0 +1,11 @@
+{
+  int v2; // r0
+
+  PiranhaMessage();
+  PlayerProfile::encode(a1[0x16], a1 + 2);
+  writeBoolean(a1 + 2, a1[0x17] != 0);
+  v2 = a1[0x17];
+  if ( v2 )
+    AllianceHeaderEntry::encode(v2, a1 + 2);
+  return writeDataReference(a1 + 2, a1[0x18]);
+}
