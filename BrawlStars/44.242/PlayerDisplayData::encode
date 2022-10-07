@@ -1,0 +1,11 @@
+{
+  _DWORD r5_1; // r5
+  _DWORD r4_1; // r4
+  int result; // r0
+
+  (*(void (__fastcall **)(int, _DWORD *))(*(_DWORD *)r1_0 + 28))(r1_0, r0_0);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)r1_0 + 68))(r1_0, r0_0[4]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)r1_0 + 68))(r1_0, r0_0[5]);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)r1_0 + 68))(r1_0, r0_0[6]);
+  return (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)r1_0 + 68))(r1_0, r0_0[7]);
+}
