@@ -1,0 +1,47 @@
+{
+  _DWORD *v4; // r0
+  int v5; // r6
+  int v6; // r6
+  int v7; // r6
+  int v8; // r1
+
+  LogicLong_0((int)a2, a1);
+  writeDataReference(a2, *(_DWORD *)(a1 + 8));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(*(_DWORD *)(a1 + 0xC) + 8));
+  v4 = *(_DWORD **)(a1 + 0xC);
+  if ( (int)v4[2] >= 1 )
+  {
+    v5 = 0;
+    do
+    {
+      HeroEntry::encode(*(_DWORD *)(*v4 + 4 * v5), a2);
+      v4 = *(_DWORD **)(a1 + 0xC);
+      ++v5;
+    }
+    while ( v5 < v4[2] );
+  }
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x18));
+  if ( *(int *)(a1 + 0x18) >= 1 )
+  {
+    v6 = 0;
+    do
+    {
+      (*(void (__fastcall **)(int *, _DWORD))(*a2 + 68))(a2, **(_DWORD **)(*(_DWORD *)(a1 + 0x10) + 4 * v6));
+      (*(void (__fastcall **)(int *, _DWORD))(*a2 + 68))(
+        a2,
+        *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(a1 + 16) + 4 * v6++) + 4));
+    }
+    while ( v6 < *(_DWORD *)(a1 + 0x18) );
+  }
+  DisplayData::encode(*(_DWORD **)(a1 + 0x1C), (int)a2);
+  v7 = *(_DWORD *)(a1 + 0x20);
+  v8 = v7;
+  if ( v7 )
+    v8 = 1;
+  (*(void (__fastcall **)(int *, int))(*a2 + 0x20))(a2, v8);
+  if ( v7 )
+    Player(*(_DWORD *)(a1 + 0x20), a2);
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x1C))(a2, *(_DWORD *)(a1 + 0x24));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x28));
+  return (*(int (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x2C));
+}
