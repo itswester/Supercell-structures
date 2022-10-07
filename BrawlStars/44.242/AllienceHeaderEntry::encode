@@ -1,0 +1,14 @@
+{
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x50))(a2, *(_DWORD *)a1);
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x1C))(a2, *(_DWORD *)(a1 + 4));
+  writeDataReference(a2, *(_DWORD *)(a1 + 8));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0xC));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x10));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x14));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x18));
+  writeDataReference(a2, *(_DWORD *)(a1 + 0x28));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x1C))(a2, *(_DWORD *)(a1 + 0x2C));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x1C));
+  (*(void (__fastcall **)(int *, _DWORD))(*a2 + 0x20))(a2, *(unsigned __int8 *)(a1 + 0x30));
+  return (*(int (__fastcall **)(int *, _DWORD))(*a2 + 0x44))(a2, *(_DWORD *)(a1 + 0x24));
+}
