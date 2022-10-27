@@ -1,0 +1,40 @@
+{
+  int v2; // r5
+  int v3; // r4
+  int v4; // r6
+
+  v2 = a1;
+  v3 = a2;
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a2 + 68))(a2, *(_DWORD *)(a1 + 12));
+  if ( *(_DWORD *)(v2 + 12) >= 1 )
+  {
+    v4 = 0;
+    do
+      LogicOfferBundle::encode(*(_DWORD *)(*(_DWORD *)(v2 + 4) + 4 * v4++), v3);
+    while ( v4 < *(_DWORD *)(v2 + 12) );
+  }
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 68))(v3, *(_DWORD *)(v2 + 20));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 68))(v3, *(_DWORD *)(v2 + 16));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 68))(v3, *(_DWORD *)(v2 + 24));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 68))(v3, *(_DWORD *)(v2 + 28));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 68))(v3, *(_DWORD *)(v2 + 32));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 32))(v3, *(unsigned __int8 *)(v2 + 36));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 68))(v3, *(_DWORD *)(v2 + 40));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 68))(v3, *(_DWORD *)(v2 + 44));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 32))(v3, *(unsigned __int8 *)(v2 + 48));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 68))(v3, *(_DWORD *)(v2 + 64));
+  ChronosTextEntry::encode(*(_DWORD **)(v2 + 52), v3);
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 32))(v3, *(unsigned __int8 *)(v2 + 72));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 28))(v3, *(_DWORD *)(v2 + 56));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 68))(v3, *(_DWORD *)(v2 + 68));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 32))(v3, *(unsigned __int8 *)(v2 + 96));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 68))(v3, *(_DWORD *)(v2 + 76));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 68))(v3, *(_DWORD *)(v2 + 80));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 28))(v3, *(_DWORD *)(v2 + 60));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 32))(v3, *(unsigned __int8 *)(v2 + 93));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 32))(v3, *(unsigned __int8 *)(v2 + 94));
+  writeDataReference(v3, *(_DWORD *)(v2 + 84));
+  writeDataReference(v3, *(_DWORD *)(v2 + 88));
+  (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 32))(v3, *(unsigned __int8 *)(v2 + 92));
+  return (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 32))(v3, *(unsigned __int8 *)(v2 + 95));
+}
